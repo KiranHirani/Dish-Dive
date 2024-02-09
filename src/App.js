@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
+import { useState } from "react";
 
-function App() {
+const AppLayout = () => {
+  const [searchValue, setSearchValue] = useState("");
+
+  const setSearch = (value) => setSearchValue(value);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* Header */}
+      <Header searchText={setSearch} />
+      {/* Body */}
+      <Body className=".body" searchValue={searchValue} />
+      {/* Footer */}
+      <Footer />
     </div>
   );
-}
-
-export default App;
+};
+export default AppLayout;

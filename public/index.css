@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:wght@500&display=swap");
+
+.header {
+  height: 50vh;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header .header-bg-img {
+  max-height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+.header-brand {
+  font-family: "Charm", cursive;
+  font-size: larger;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 4rem;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+.header-brand .title {
+  font-size: 80px;
+  font-weight: 500;
+  filter: brightness(120%);
+  letter-spacing: 5px;
+}
+
+.header-brand input {
+  height: 2.4rem;
+  border: none;
+  width: 40%;
+  font-family: "Charm", cursive;
+  font-size: 16px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.header-brand .search-btn {
+  border: none;
+  font-family: "Charm", cursive;
+  font-size: 20px;
+  width: 7%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.header-brand .search-bar {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-brand .description {
+  font-size: 35px;
+  font-family: "Niramit", sans-serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 20vw;
+  height: 35vh;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  margin: 4.4%;
+}
+
+.card-name {
+  text-align: center;
+  font-family: "Niramit", sans-serif;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.card:hover {
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  filter: brightness(95%);
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.body {
+  background-color: #fbf7f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.categories ul {
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories ul li {
+  list-style-type: none;
+  margin: 1rem;
+  font-size: 20px;
+  font-family: "Niramit", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.categories ul li:hover {
+  filter: brightness(110%);
+}
+
+.selected-category {
+  background-color: lightgrey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.dropdown {
+  float: right;
+  font-size: larger;
+  font-family: "Niramit", sans-serif;
+  margin-right: 4vw;
+}
+
+.dropdown select {
+  font-size: large;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: "Niramit", sans-serif;
+}
+
+.reset {
+  margin-right: 30px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px lightgrey;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+/* .category-list-and-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 30px;
+} */
+
+.theme {
+  margin-left: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Shimmer UI Styling  */
+
+.shimmer-card {
+  width: 20vw;
+  height: 35vh;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.categories-shimmer {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.categories-shimmer ul {
+  display: flex;
+}
+
+.shimmer-category {
+  background-color: rgb(235, 235, 235);
+  width: 150px;
+  height: 5vh;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.categories-shimmer li {
+  list-style-type: none;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  margin-top: 20px;
+  /* padding: 20px; */
+  height: 10vh;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  filter: brightness(0.8);
+}
+
+.common-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-heading {
+  font-family: "Charm", cursive;
+  font-size: 40px;
+}
+
+.about-us,
+.contact-us {
+  font-family: "Niramit", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.about-us a,
+.contact-us a {
+  text-decoration: none;
+  color: black;
+}
+
+.about-us:hover,
+.contact-us:hover {
+  scale: 110%;
+  cursor: pointer;
+}
+
+.fa-brands {
+  margin: 10px;
+  font-size: larger;
+}
+
+.links-title {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Niramit", sans-serif;
+}
+
+/* Common Header */
+.common-header-background-image {
+  max-height: 30vh;
+  width: 120%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
