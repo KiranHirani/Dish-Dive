@@ -6,4 +6,23 @@ export const ALL_CATEGORIES = {
   PRODUCTS: "Products",
   MENU_ITEMS: "Menu Items",
   ARTICLES: "Articles",
+  VIDEOS: "Videos",
+  SIMPLE_FOODS: "Simple Foods",
 };
+
+export const ROOT_ADDRESS = "https://api.spoonacular.com/";
+
+export const API_KEY = "9a2ebf857c494c68ab8498047a62e44f";
+
+export const CATEGORY_TO_API_MAPPING = {
+  "All Category": "food/search?query=vegetable",
+  Recipes: "recipes/{id}/information?",
+  Products: "food/products/{id}?",
+  "Menu Items": "food/menuItems/{id}?",
+  Articles: "recipes/random?",
+  Videos: "food/search?query=vegetable",
+  "Simple Foods": "food/ingredients/{id}/information?",
+};
+
+//SIMPLE FOODS IMAGE API
+export const IMAGE_API = "https://spoonacular.com/cdn/ingredients_250x250/";

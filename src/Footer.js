@@ -1,14 +1,18 @@
+import { Link } from "react-router-dom";
+
 const Footer = ({ className }) => {
   return (
     <div className={`footer ${className}`}>
       <div className="footer-heading">
-        Dish Dive <i class="fa-solid fa-utensils"></i>
+        <Link to="/">
+          Dish Dive <i class="fa-solid fa-utensils"></i>
+        </Link>
       </div>
       <div className="about-us">
-        <a href="">About Us</a>
+        <Link to="/about">About Us</Link>
       </div>
       <div className="contact-us">
-        <a href="">Contact Us</a>
+        <Link to="/contact">Contact Us</Link>
       </div>
 
       <div className="social-links">

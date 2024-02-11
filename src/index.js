@@ -4,6 +4,9 @@ import AppLayout from "./App";
 import AboutUs from "./About";
 import "font-awesome/css/font-awesome.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContactUs from "./Contact";
+import Error from "./Error";
+import Details from "./Details";
 
 const h1 = React.createElement("h1", {}, "This is Heading");
 
@@ -13,10 +16,19 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <Error />,
   },
   {
     path: "/about",
     element: <AboutUs />,
+  },
+  {
+    path: "/contact",
+    element: <ContactUs />,
+  },
+  {
+    path: "details/:category/:id",
+    element: <Details />,
   },
 ]);
 

@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import RestaurantCard from "./RestaurantCard";
 import Sort from "./Sort";
-import { ALL_CATEGORIES } from "./shared/constant";
+import {
+  ALL_CATEGORIES,
+  API_KEY,
+  CATEGORY_TO_API_MAPPING,
+  ROOT_ADDRESS,
+} from "./shared/constant";
 import Shimmer from "./Shimmer";
 
 const Body = ({ searchValue }) => {
@@ -71,15 +76,27 @@ const Body = ({ searchValue }) => {
   }, [searchValue]);
 
   let fetchData = async () => {
-    const response = await fetch(
-      "https://api.spoonacular.com/food/search?query=vegetable&apiKey=9a2ebf857c494c68ab8498047a62e44f"
-    );
-    response.json().then(({ searchResults }) => {
-      setApiResponse(searchResults);
-      modifyRecipes(searchResults[0].results);
-      setFilteredDishes(searchResults[0].results);
-      setAllCategories(searchResults.map(({ name }) => name));
-    });
+    try {
+      const response = await fetch(
+        ROOT_ADDRESS +
+          CATEGORY_TO_API_MAPPING["All Category"] +
+          "&apiKey=" +
+          API_KEY
+      );
+      response
+        .json()
+        .then(({ searchResults }) => {
+          setApiResponse(searchResults);
+          modifyRecipes(searchResults[0].results);
+          setFilteredDishes(searchResults[0].results);
+          setAllCategories(searchResults.map(({ name }) => name));
+        })
+        .catch((err) =>
+          alert("Something went wrong. Kindly try after some time")
+        );
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   //Conditional Rendering - Rendering on the basis of a condition

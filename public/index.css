@@ -1,12 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Niramit:wght@500&display=swap");
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
 
 .header {
   height: 50vh;
 }
+.common-header {
+  height: 30vh;
+}
 
 body {
   overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.details {
+  text-decoration: none;
+  color: black;
 }
 
 .header .header-bg-img {
@@ -231,6 +247,8 @@ body {
   justify-content: space-around;
   align-items: center;
   filter: brightness(0.8);
+  position: relative;
+  bottom: 0;
 }
 
 .common-footer {
@@ -251,7 +269,8 @@ body {
 }
 
 .about-us a,
-.contact-us a {
+.contact-us a,
+.footer-heading a {
   text-decoration: none;
   color: black;
 }
@@ -279,4 +298,101 @@ body {
   width: 120%;
   object-fit: cover;
   filter: brightness(70%);
+}
+
+.header-brand .title a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.navigation-bar {
+  margin-top: 0;
+  margin-left: 12px;
+  font-size: 25px;
+  font-family: "Niramit", sans-serif;
+}
+
+.category-details-card {
+  height: 25vh;
+  width: 100%;
+  /* background-color: aliceblue; */
+  display: flex;
+  margin: 15px;
+}
+
+.category-details-card .desc {
+  font-size: 20px;
+  font-family: "Niramit", sans-serif;
+  background-color: aliceblue;
+  margin: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px lightgrey;
+  text-align: justify;
+}
+
+.expansion-panel {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Niramit", sans-serif;
+}
+
+.badges {
+  margin-top: 140px;
+  width: 100%;
+  text-align: center;
+}
+
+.badge {
+  background-color: #747880;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 2px 2px 10px lightgrey;
+  font-family: "Niramit", sans-serif;
+  font-size: larger;
+}
+
+.product-image {
+  width: 20%;
+}
+
+table {
+  font-family: "Niramit", sans-serif;
+  font-size: large;
+}
+
+.details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-badges {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product-badges li {
+  list-style-type: none;
+}
+
+.video-responsive {
+  display: flex;
+  justify-content: center;
+}
+
+.article-message {
+  font-family: "Niramit", sans-serif;
+  text-align: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
