@@ -4,7 +4,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const RandomRecipe = ({ data }) => {
-  console.log(data);
   const { image, summary, instructions, readyInMinutes, servings, glutenFree } =
     data;
   return (

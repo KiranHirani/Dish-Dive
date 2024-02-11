@@ -7,7 +7,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 const Products = ({ data }) => {
-  // console.log(data);
   const { generatedText, image, badges, nutrition, servings } = data;
 
   const rows = nutrition?.nutrients?.map(({ name, amount, unit }) => {
