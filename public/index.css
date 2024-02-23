@@ -19,10 +19,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .details {
   text-decoration: none;
   color: black;
+}
+
+.recipe-details {
+  display: flex;
 }
 
 .header .header-bg-img {
@@ -43,6 +46,15 @@ body {
   width: 100%;
   color: white;
 }
+.common-brand {
+  top: 1rem;
+}
+
+.online-status {
+  font-family: "Niramit", sans-serif;
+  text-align: center;
+}
+
 .header-brand .title {
   font-size: 80px;
   font-weight: 500;
@@ -262,7 +274,8 @@ body {
 }
 
 .about-us,
-.contact-us {
+.contact-us,
+.random-recipe {
   font-family: "Niramit", sans-serif;
   font-size: 20px;
   margin: 10px;
@@ -270,13 +283,15 @@ body {
 
 .about-us a,
 .contact-us a,
+.random-recipe a,
 .footer-heading a {
   text-decoration: none;
   color: black;
 }
 
 .about-us:hover,
-.contact-us:hover {
+.contact-us:hover,
+.random-recipe:hover {
   scale: 110%;
   cursor: pointer;
 }
@@ -284,6 +299,7 @@ body {
 .fa-brands {
   margin: 10px;
   font-size: larger;
+  cursor: pointer;
 }
 
 .links-title {
@@ -316,13 +332,22 @@ body {
 .category-details-card {
   height: 25vh;
   width: 100%;
-  /* background-color: aliceblue; */
   display: flex;
   margin: 15px;
 }
 
-.category-details-card .desc {
-  font-size: 20px;
+.recipe-desc {
+  font-size: 1.1rem;
+  font-family: "Niramit", sans-serif;
+  background-color: aliceblue;
+  margin: 0px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px lightgrey;
+  text-align: justify;
+}
+
+.desc {
+  font-size: 1.1rem;
   font-family: "Niramit", sans-serif;
   background-color: aliceblue;
   margin: 0px;
@@ -395,4 +420,20 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about-us-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.inside-card-about-us {
+  width: 100%;
+}
+
+.inside-card-joke {
+  max-width: none !important;
 }

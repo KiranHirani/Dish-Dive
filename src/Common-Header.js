@@ -10,7 +10,7 @@ const CommonHeader = ({ header }) => {
           src={HEADER_IMAGE_URL}
         />
       </div>
-      <div className="header-brand">
+      <div className="header-brand common-brand">
         <span className="title">
           <Link to="/">Dish Dive</Link>
         </span>

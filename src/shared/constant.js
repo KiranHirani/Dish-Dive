@@ -8,6 +8,7 @@ export const ALL_CATEGORIES = {
   ARTICLES: "Articles",
   VIDEOS: "Videos",
   SIMPLE_FOODS: "Simple Foods",
+  RANDOM_RECIPE: "Random",
 };
 
 export const ROOT_ADDRESS = "https://api.spoonacular.com/";
@@ -22,6 +23,8 @@ export const CATEGORY_TO_API_MAPPING = {
   Articles: "recipes/random?",
   Videos: "food/search?query=vegetable",
   "Simple Foods": "food/ingredients/{id}/information?",
+  Random: "recipes/random?",
+  Joke: "food/jokes/random?",
 };
 
 //SIMPLE FOODS IMAGE API
